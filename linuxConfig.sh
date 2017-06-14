@@ -14,6 +14,10 @@ cp ./OSX-Arc-White /usr/share/themes # 安装osx主题
 sudo add-apt-repository ppa:numix/ppa
 sudo apt-get update
 sudo apt-get install numix # 安装numix图标主题
+git clone https://github.com/optimisme/gnome-shell-simple-dock.git　# 安装dock栏
+cd gnome-shell-simple-dock
+chmod 744 install.sh
+./install.sh
 # 需要重新进入桌面环境
 
 curl https://raw.githubusercontent.com/wklken/vim-for-server/master/vimrc > ~/.vimrc # VIM配置
