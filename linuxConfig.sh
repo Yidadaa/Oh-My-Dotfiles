@@ -8,7 +8,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # 主题美化
 # 默认是对Ubuntu进行美化
-sudo apt-get install gnome-shell
+sudo apt-get install gnome-shell gnome-tweak-tool
 git clone https://github.com/LinxGem33/OSX-Arc-White.git
 cp ./OSX-Arc-White /usr/share/themes # 安装osx主题
 sudo add-apt-repository ppa:numix/ppa
@@ -23,6 +23,9 @@ chmod 744 install.sh
 curl https://raw.githubusercontent.com/wklken/vim-for-server/master/vimrc > ~/.vimrc # VIM配置
 
 # 触控板配置
+sudo gpasswd -a $USER input # 为当前用户添加input权限
+# 重启桌面
+sudo apt-get install libinput-tools xdotool
 sudo apt-get install ruby
 gem install fusuma
 mkdir ~/.config/fusuma
