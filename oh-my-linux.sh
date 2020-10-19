@@ -5,7 +5,6 @@ echo 'Installing Common Tools...'
 sudo apt-get install -y curl
 sudo apt-get install -y git
 sudo apt-get install -y zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # 安装oh-my-zsh
 
 echo 'Setting up VIM'
 # 安装 VIM 插件
@@ -22,5 +21,7 @@ curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.vimr
 echo 'Setting up Tmux...'
 sudo apt install -y tmux
 curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.tmux.conf > ~/.tmux.conf
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # 安装oh-my-zsh
 
 echo 'Done, enjoy coding :)'
