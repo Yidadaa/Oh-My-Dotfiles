@@ -198,7 +198,7 @@ au InsertLeave * set nopaste
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
 " kj 替换 Esc
-inoremap kj <Esc>
+inoremap jj <Esc>
 
 " Quickly close the current window
 nnoremap <leader>q :q<CR>
@@ -265,3 +265,5 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let NERDTreeShowHidden=1
