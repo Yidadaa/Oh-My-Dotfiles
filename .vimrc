@@ -197,8 +197,8 @@ set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
 au InsertLeave * set nopaste
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
-" jj 替换 Esc
-inoremap jj <Esc>
+" kj 替换 Esc
+inoremap kj <Esc>
 
 " Quickly close the current window
 nnoremap <leader>q :q<CR>
