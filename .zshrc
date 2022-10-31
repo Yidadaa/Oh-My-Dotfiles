@@ -1,6 +1,8 @@
+ZSH_THEME=robbyrussell
+
 export ZSH="$HOME/.oh-my-zsh"
 
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,13 +92,6 @@ ssh-add ~/.ssh/id_rsa
 
 # export PATH="/usr/local/opt/llvm/bin:$PATH"
 # source "/Users/zhangyifei/Projects/wukong/wukong-editor/third-party/skia/third_party/externals/emsdk/emsdk_env.sh"
-
-# >>> xmake >>>
-[[ -s "$HOME/.xmake/profile" ]] && source "$HOME/.xmake/profile" # load xmake profile
-# <<< xmake <<<
-export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # pnpm
 export PNPM_HOME="/Users/zhangyifei/Library/pnpm"
