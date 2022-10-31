@@ -1,5 +1,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export LANG=en_US.UTF-8
