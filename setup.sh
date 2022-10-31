@@ -10,12 +10,12 @@ if [[ $OSTYPE == 'darwin'* ]]; then
     brew tap --custom-remote --force-auto-update "homebrew/${tap}" "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-${tap}.git"
   done
   brew update
-  brew install -y tmux procs ripgrep fzf fd xclip delta cargo bat
-  brew tap wez/wezterm
-  brew install --cask wez/wezterm/wezterm
+  brew install -y tmux procs ripgrep fzf fd reattach-to-user-namespace delta rust bat
+  brew install --cask font-jetbrains-mono
 else
   sudo apt-get install -y curl git 
   tmux procs ripgrep fzf fd-find xclip delta cargo bat
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 fi
 
 echo 'Setting up VIM'
