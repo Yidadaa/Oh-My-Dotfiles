@@ -42,6 +42,7 @@ mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
 # 与 fzf 搭配使用：fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 # 别名：alias cat=bat
+curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/oh-my-day.sh > ~/.local/bin/oh-my-day.sh
 
 # 或者更高级的用法
 fif() {
