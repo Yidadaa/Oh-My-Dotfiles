@@ -2,7 +2,18 @@
 
 # 命令行配置
 echo 'Installing Common Tools...'
-sudo apt-get install -y curl git zsh tmux procs ripgrep fzf fd-find xclip delta
+if [[ $OSTYPE == 'darwin'* ]]; then
+  xcode-select --install
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+  for tap in core cask{,-fonts,-drivers,-versions} command-not-found; do
+    brew tap --custom-remote --force-auto-update "homebrew/${tap}" "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-${tap}.git"
+  done
+  brew update
+  brew install -y zsh tmux procs ripgrep fzf fd-find xclip delta cargo bat
+else
+  sudo apt-get install -y curl git zsh tmux procs ripgrep fzf fd-find xclip delta cargo bat
+fi
 
 echo 'Setting up VIM'
 # 安装 VIM 插件
@@ -35,27 +46,10 @@ echo 'Installing awesome cli tools...'
 pip3 install tldr # 用于替代 man 命令
 # 别名：alias fd=fdfind
 
-sudo apt install -o Dpkg::Options::="--force-overwrite" bat ripgrep -y # 用于替代 cat 工具
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
-# 与 fzf 搭配使用：fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-# 别名：alias cat=bat
-curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/oh-my-day.sh > ~/.local/bin/oh-my-day.sh
 
-# 或者更高级的用法
-fif() {
-	rg  \
-	--column \
-	--line-number \
-	--no-column \
-	--no-heading \
-	--fixed-strings \
-	--ignore-case \
-	--hidden \
-	--follow \
-	--glob '!.git/*' "$1" \
-	| awk -F  ":" '/1/ {start = $2<5 ? 0 : $2 - 5; end = $2 + 5; print $1 " " $2 " " start ":" end}' \
-	| fzf --preview 'bat --wrap character --color always {1} --highlight-line {2} --line-range {3}' --preview-window wrap
-}
+# 快捷脚本
+curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/oh-my-day.sh > ~/.local/bin/oh-my-day.sh
 
 echo 'Done, enjoy coding :)'
