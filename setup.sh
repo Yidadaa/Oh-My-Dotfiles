@@ -10,9 +10,12 @@ if [[ $OSTYPE == 'darwin'* ]]; then
     brew tap --custom-remote --force-auto-update "homebrew/${tap}" "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-${tap}.git"
   done
   brew update
-  brew install -y zsh tmux procs ripgrep fzf fd-find xclip delta cargo bat
+  brew install -y tmux procs ripgrep fzf fd xclip delta cargo bat
+  brew tap wez/wezterm
+  brew install --cask wez/wezterm/wezterm
 else
-  sudo apt-get install -y curl git zsh tmux procs ripgrep fzf fd-find xclip delta cargo bat
+  sudo apt-get install -y curl git 
+  tmux procs ripgrep fzf fd-find xclip delta cargo bat
 fi
 
 echo 'Setting up VIM'
@@ -35,11 +38,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # wezterm
 curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.wezterm.lua > ~/.wezterm.lua
 
-# zsh
-curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.zshrc > ~/.zshrc
-
 # 安装oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.zshrc > ~/.zshrc
 
 # 命令行工具
 echo 'Installing awesome cli tools...'
