@@ -15,7 +15,7 @@ export http_proxy=http://proxy.zhenguanyu.com:8118
 # export http_proxy=$local_proxy
 export https_proxy=$http_proxy
 
-alias ohmyday=~/.local/ohmyday.sh
+alias ohmyday=~/.local/oh-my-day.sh
 alias sync="git pull origin main"
 alias gm="git checkout main && git pull"
 alias gpf="git push -f"
