@@ -54,7 +54,6 @@ bwos() {
 }
 
 bwo() {
-
     wmk "-w$@" wk-wasm-only-for-web-by-brotli;
 }
 
@@ -85,17 +84,7 @@ fif() {
 
 git config --global alias.ls "log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-alias nv=neovide
-alias vi=nv
-
 ssh-add ~/.ssh/id_rsa
 
 # export PATH="/usr/local/opt/llvm/bin:$PATH"
 # source "/Users/zhangyifei/Projects/wukong/wukong-editor/third-party/skia/third_party/externals/emsdk/emsdk_env.sh"
-
-# pnpm
-export PNPM_HOME="/Users/zhangyifei/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-#
-export PATH="/usr/local/opt/protobuf@3/bin:$PATH"
