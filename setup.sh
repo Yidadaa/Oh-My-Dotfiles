@@ -13,8 +13,7 @@ if [[ $OSTYPE == 'darwin'* ]]; then
   brew install -y tmux procs ripgrep fzf fd reattach-to-user-namespace delta rust bat
   brew install --cask font-jetbrains-mono
 else
-  sudo apt-get install -y curl git 
-  tmux procs ripgrep fzf fd-find xclip delta cargo bat
+  sudo apt-get install -y curl git tmux ripgrep fzf fd-find xclip delta cargo bat zsh
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 fi
 
