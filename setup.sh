@@ -33,6 +33,7 @@ curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.vimr
 echo 'Setting up Tmux...'
 curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.tmux.conf > ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# 使用 prefix + I 来安装 tpm 管理的插件
 
 # wezterm
 curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.wezterm.lua > ~/.wezterm.lua
