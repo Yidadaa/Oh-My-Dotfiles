@@ -6,7 +6,7 @@ plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.local/bin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -82,7 +82,6 @@ fif() {
 
 git config --global alias.ls "log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-ssh-add ~/.ssh/id_rsa
-
-# export PATH="/usr/local/opt/llvm/bin:$PATH"
-# source "/Users/zhangyifei/Projects/wukong/wukong-editor/third-party/skia/third_party/externals/emsdk/emsdk_env.sh"
+git config --global http.proxy http://127.0.0.1:7890
+git config --global user.name Yidadaa
+git config --global user.email yidadaa@qq.com
