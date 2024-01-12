@@ -11,9 +11,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 local_proxy=http://127.0.0.1:7890
-export http_proxy=http://proxy.zhenguanyu.com:8118
-# export http_proxy=$local_proxy
-export https_proxy=$http_proxy
+export http_proxy=$local_proxy
 
 alias ohmyday=~/.local/oh-my-day.sh
 alias sync="git pull origin main"
