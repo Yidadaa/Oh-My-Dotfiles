@@ -40,7 +40,7 @@ curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.wezt
 
 # 安装oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.zsh}/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.zshrc > ~/.zshrc
 
 # 命令行工具
