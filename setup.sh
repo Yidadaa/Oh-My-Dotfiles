@@ -38,7 +38,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # wezterm/kitty
 curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/.wezterm.lua > ~/.wezterm.lua
 
-curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/kitty.config > ~/.config/kitty.config
+curl https://raw.githubusercontent.com/Yidadaa/Linux-Desktop-Config/master/kitty.config > ~/.config/kitty/kitty.config
 
 # 安装oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
